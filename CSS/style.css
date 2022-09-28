@@ -21,6 +21,9 @@ nav {
     padding-bottom: 1.5%;
     padding-right: 25px;
     max-height: 80px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
 }
 
 .company-logo {
@@ -66,6 +69,11 @@ nav {
     font-weight:450;
     padding: 10.8px;
     line-height: 30.6px;
+    background: #141D26;
+}
+
+.nav-bar-panel ul li:hover{
+    cursor: pointer;
 }
 
 .nav-icon-set {
@@ -74,8 +82,8 @@ nav {
     justify-self: center;
 }
 
-.nav-icon-set span {
-    padding-right: 23px;
+.nav-bar-panel span {
+    padding-right: 37px;
 }
 
 .fa-angle-down {
@@ -98,5 +106,165 @@ nav {
     color: #fff;
     font-weight: 500;
     line-height: 28.8px;
+}
+
+
+/*--------------------SubMenu----------------------*/
+
+.sub-menu {
+    display: none;
+}
+
+.nav-bar-panel ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: #141D26;
+    margin-top: 40px;
+    margin-left: -15px;
+    
+}
+
+.nav-bar-panel ul li:hover .sub-menu ul {
+    display: block;
+}
+
+.nav-bar-panel ul li:hover .sub-menu ul li{
+    color: #fff;
+    font-size: 18px; 
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.nav-bar-panel ul li:hover .sub-menu ul li:hover{
+    background-color: rgba(255, 255, 255, 0.008);
+}
+
+
+
+
+/*--------------------Body Section----------------------*/
+
+.body-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.disp-message {
+    flex: 1;
+    padding-top: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.disp-message h2{
+    font-size: 89px;
+    font-weight: 800;
+    font-family: 'Jost', sans-serif;
+    color: #1d256b;
+    font-style: normal;
+    line-height: 84.24px;
+    text-size-adjust: 100%;
+    letter-spacing: -1.44px;
+    margin-bottom: 55px;
+}
+
+.msg-btn {
+    width: 190px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    background: #696CFF;
+}
+
+.msg-btn:hover {
+    background: #BBC0D4
+}
+.center-img {
+    flex: 1;
+    background-size: cover;
+    background-position: right;
+    margin-right: -150px;
+    background-color: #fff;
+    transform: rotate(-20deg);
+    padding:5%;
+    box-shadow: -4px 12px 0px 0px rgb(11 120 244 / 20%);
+}
+
+.body-image {
+    max-width: 100%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.colspan1 {
+    width: 120px;
+    height: 150px;
+    background: #141D26;
+    position: absolute;
+    bottom: -300px;
+    left: 0px;
+}
+
+.colspan2 {
+    width: 450px;
+    height: 200px;
+    background: #141D26;
+    position: absolute;
+    bottom: -300px;
+    right: 0px;
+}
+
+@media  screen and (max-width: 912px){
+    nav{
+        width: 100%;
+        align-items: center;
+    }
+    .nav-bar-panel{
+       display: none;
+    }
+
+    
+@media  screen and (max-width: 412px) {
+        nav{
+            width: 80%;
+        }
+    
+        .nav-bar-panel{
+            display: none;
+        }
+    
+        .body-section{
+            flex-direction: column;
+        }
+    
+        .disp-message{
+            font-size: 20px;
+        }
+    
+        .msg-btn{
+            width: 150px;
+            height: 50px;
+        } 
+    
+        .get-started-btn{
+            padding: 3px, 40px, 3px, 40px;
+        }
+    
+    }
+    
 }
 
